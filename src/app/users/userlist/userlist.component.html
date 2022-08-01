@@ -1,0 +1,25 @@
+<div class="container text-center table-responsive">
+    <h2 style="background-color: white;">User List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of allUsers">
+                <th scope="row">{{user.id}}</th>
+                <a [routerLink]="['/users/album', user.id, user.name]" data-toggle="tooltip" title="Click on the Name" placement="top" data-title="This top tooltip is themed via CSS variables."><td class="user-name">{{user.name}}</td></a>
+                <td>{{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}}</td>
+                <td>
+                   <a [routerLink]="['/users/album', user.id, user.name]" data-toggle="tooltip" title="View Albums" placement="top" id="goToAlbums"><fa-icon [icon]="faAlbum" class="album"></fa-icon></a>
+                   <a [routerLink]="['/users/addAlbum', user.id, user.name]" data-toggle="tooltip" title="Add Album" placement="top"><fa-icon [icon]="faAlbumAdd" class="album"></fa-icon></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<router-outlet></router-outlet>

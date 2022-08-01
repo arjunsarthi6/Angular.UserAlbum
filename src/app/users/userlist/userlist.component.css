@@ -1,0 +1,24 @@
+
+.album {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.album:hover {
+    color: #666;
+    text-decoration: none;
+    border-bottom: dotted;
+}
+.user-name:hover{
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+h2{
+    background-color: white;
+    text-decoration: underline;
+}
+a {
+    text-decoration: inherit;
+    color: inherit;
+  }

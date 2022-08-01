@@ -1,0 +1,15 @@
+<div class="container text-center">
+    <h2 style="background-color: white;">Album {{albumName}}'s Photos</h2>
+    <div class="gallery-container">
+        <div class="row">
+            <div *ngFor="let photo of allPhotos" class="album-gallery">
+                <a [routerLink]="['/users/photos', photo.id, photo.title]" data-toggle="tooltip" title="Click on the Name" placement="top" data-title="Click photo">
+                    <img src="{{photo.url}}" alt="{{photo.title}}" width="600" height="400">
+                </a>
+                <div class="desc">{{photo.title}}</div>
+              </div>
+        </div>
+      </div> 
+</div>
+
+<router-outlet></router-outlet>

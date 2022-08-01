@@ -1,0 +1,28 @@
+.container{
+    text-decoration: underline;
+  }
+  .album-gallery{
+    float: left;
+    margin:15px;
+    width:180px;
+  }
+  
+  .album-gallery:hover{
+    text-decoration: underline;
+    border: 1px solid #ddd;
+  }
+  
+  .album-gallery img{
+  width:80%;
+  height:auto;
+  }
+  
+  .desc{
+    padding: 5px;
+    padding-left: 0px;
+    text-align:center;
+  }
+  
+  .gallery-container{
+    margin-top: 40px;
+  }
